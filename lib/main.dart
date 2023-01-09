@@ -45,7 +45,7 @@ _jobTitleStyle(context) =>
       // fontWeight: FontWeight.w200,
     );
 
-_addFont(ThemeData baseTheme) {
+_addFontTheme(ThemeData baseTheme) {
   return baseTheme.copyWith(
       textTheme: _fixBlurryTextIssue81215(mainTextThemeBuilder(baseTheme.textTheme)));
 }
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: _addFont(ThemeData(
+      theme: _addFontTheme(ThemeData(
           primarySwatch: Colors.grey,
           useMaterial3: true,
           brightness: Brightness.dark,
@@ -95,10 +95,10 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.black,
       body: Container(
         decoration: BoxDecoration(image: DecorationImage(
-            image: NetworkImage(images.first),
+            image: NetworkImage(images[1]),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(.15),
+              Colors.black.withOpacity(.20),
               BlendMode.dstATop,
             ))),
         padding: const EdgeInsets.all(24.0),
@@ -353,11 +353,11 @@ class _DetailsState extends State<Details> {
 
 final languages = [
   'https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white',
-  'https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white',
   'https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue',
+  'https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white',
+  'https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white',
   'https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white',
   'https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white',
-  'https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white',
   'https://img.shields.io/badge/ObjectiveC-E24628?style=for-the-badge&logo=c&logoColor=white',
 ];
 
